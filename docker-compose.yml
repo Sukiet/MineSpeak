@@ -1,0 +1,10 @@
+services:
+  livekit:
+    image: livekit/livekit-server:latest
+    command: --config /etc/livekit.yaml
+    volumes:
+      - ./livekit/livekit.yaml:/etc/livekit.yaml:ro
+    ports:
+      - "7880:7880"        # HTTP/WebSocket
+      - "7881:7881"        # RTC TCP
+      - "50000-50100:50000-50100/udp"  # RTC UDP range
