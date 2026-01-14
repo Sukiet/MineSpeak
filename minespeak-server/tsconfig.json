@@ -26,7 +26,7 @@
     "tests/**/*.ts",
     "config.ts",
     "scripts",
-    "eslint.config.ts",
+    "eslint.config.mjs",
     "vitest.config.mts"
   ],
   "exclude": [
