@@ -9,6 +9,12 @@ const Paths = {
     Update: '/update',
     Delete: '/delete/:id',
   },
+
+  // some route tests
+  Tests: {
+    _: '/tests',
+    t1: '/t1',
+  },
 } as const;
 
 export const JetPaths = jetPaths(Paths);
