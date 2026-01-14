@@ -1,5 +1,6 @@
 services:
   livekit:
+    container_name: livekit
     image: livekit/livekit-server:latest
     command: --config /etc/livekit.yaml
     volumes:
@@ -8,3 +9,14 @@ services:
       - "7880:7880"        # HTTP/WebSocket
       - "7881:7881"        # RTC TCP
       - "50000-50100:50000-50100/udp"  # RTC UDP range
+
+  minespeak-server:
+    build:
+      context: ./minespeak-server
+      dockerfile: Dockerfile
+    container_name: ms-server
+    ports:
+      - "3000:3000"
+    environment:
+      NODE_ENV: ${NODE_ENV}
+      PORT: 3000
