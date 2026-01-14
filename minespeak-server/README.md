@@ -1,5 +1,26 @@
 ## About
 
+```
+┌─────────────────────────────┐
+│ server.ts / index.ts        │  ← 程序入口 / 启动层
+├─────────────────────────────┤
+│ routes/                     │  ← HTTP 接口层（Controller）
+├─────────────────────────────┤
+│ services/                   │  ← 业务逻辑层（Service）
+├─────────────────────────────┤
+│ repos/                      │  ← 数据访问层（Repository）
+├─────────────────────────────┤
+│ models/                     │  ← 数据结构 / 类型定义
+├─────────────────────────────┤
+│ common/                     │  ← 全局工具 / 常量 / 基础设施
+├─────────────────────────────┤
+│ public/  views/             │  ← 静态资源 / 页面
+└─────────────────────────────┘
+
+```
+
+
+
 This project was created with [express-generator-typescript](https://github.com/seanpmaxwell/express-generator-typescript).
 
 **IMPORTANT** for demo purposes I had to disable `helmet` in production. In any real world app you should change these 3 lines of code in `src/server.ts`:
