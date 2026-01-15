@@ -24,6 +24,9 @@ userRouter.delete(Paths.Users.Delete, UserRoutes.delete);
 const testsRouter = Router();
 
 testsRouter.get(Paths.Tests.t1, TestsRoutes.t1);
+testsRouter.get(Paths.Tests.test_rooms, TestsRoutes.test_get_rooms);
+testsRouter.get(Paths.Tests.add_room, TestsRoutes.test_add_room);
+testsRouter.get(Paths.Tests.delete_room, TestsRoutes.test_delete_room);
 
 
 // **** Assemble Routers **** //

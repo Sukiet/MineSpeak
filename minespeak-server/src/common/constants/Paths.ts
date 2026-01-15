@@ -14,6 +14,9 @@ const Paths = {
   Tests: {
     _: '/tests',
     t1: '/t1',
+    test_rooms: '/tr',
+    add_room: '/ar/:str',
+    delete_room: '/dr/:str',
   },
 } as const;
 
