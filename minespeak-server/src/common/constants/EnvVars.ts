@@ -1,4 +1,4 @@
-import jetEnv, { num } from 'jet-env';
+import jetEnv, { num, str } from 'jet-env';
 import { isValueOf } from 'jet-validators';
 
 import { NodeEnvs } from '.';
@@ -10,6 +10,12 @@ import { NodeEnvs } from '.';
 const EnvVars = jetEnv({
   NodeEnv: isValueOf(NodeEnvs),
   Port: num,
+
+  Livekit: {
+    Host: str,
+    ApiKey: str,
+    ApiSecret: str,
+  },
 });
 
 /******************************************************************************

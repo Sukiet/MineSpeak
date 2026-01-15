@@ -24,7 +24,7 @@ RUN npm run build
 # =========================
 # Stage 2: Runtime
 # =========================
-FROM node:20-alpine
+FROM node:22-alpine
 
 WORKDIR /app
 

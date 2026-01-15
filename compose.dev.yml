@@ -1,0 +1,5 @@
+# services:
+#   minespeak-server:
+#     build:
+#       context: ./minespeak-server
+#       dockerfile: Dockerfile.dev

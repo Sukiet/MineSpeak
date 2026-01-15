@@ -20,3 +20,6 @@ services:
     environment:
       NODE_ENV: ${NODE_ENV}
       PORT: 3000
+      LIVEKIT_HOST: ${LIVEKIT_HOST}
+      LIVEKIT_API_KEY: ${LIVEKIT_API_KEY}
+      LIVEKIT_API_SECRET: ${LIVEKIT_API_SECRET}
