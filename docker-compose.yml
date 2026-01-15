@@ -9,6 +9,16 @@ services:
       - "7880:7880"        # HTTP/WebSocket
       - "7881:7881"        # RTC TCP
       - "50000-50100:50000-50100/udp"  # RTC UDP range
+    environment:
+      LIVEKIT_CONFIG: |
+        port: 7880
+        log_level: info
+        rtc:
+          tcp_port: 7881
+          port_range_start: 50000
+          port_range_end: 50100
+        keys:
+          ${LIVEKIT_API_KEY}: ${LIVEKIT_API_SECRET}
 
   minespeak-server:
     build:
